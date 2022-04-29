@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jo Malone</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/normalize.css"> <!-- 讓版面切齊網站 -->
+    <script src="my-js.js"></script>
+    <!-- CSS only -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+</head>
+<style>
+    .saler-btn {
+        /* 放到css去會導致設置無效 */
+        background-color: var(--main-color);
+        border: 1px solid rgb(218, 216, 216);
+        color: black;
+        border-radius: 0px;
+        padding: 10px 30px;
+        font-size: 12px;
+        letter-spacing: 1px;
+        margin: 10px 0px;
+    }
+
+    .cart-btn {
+        margin: 0px;
+        padding: 0px;
+    }
+
+    .submit-btn {
+        background-color: black;
+        color: white;
+        padding: 5px 30px;
+        border-radius: 0px;
+    }
+
+    .submit-btn:hover {
+        background-color: #FCF9EE;
+        color: black;
+        padding: 5px 30px;
+        border-radius: 0px;
+        border: 1px solid gray;
+    }
+
+    .inline-ele {
+        display: block;
+    }
+
+    .choose-btn {
+        background-color: transparent;
+        color: black;
+        font-size: 12px;
+        border: 0px;
+        margin-top: -4px;
+    }
+
+    .choose-btn:hover {
+        background-color: transparent;
+        color: black;
+    }
+</style>
+
+<body>
+    <!-- header部分 -->
+    <div class="container-fluid fixed-top" in="navbar">
+        <header class="row main-header">
+            <nav class="col-5 main-nav fixd-bottom main-nav">
+                <ul class="list-unstyled">
+                    <li class="products"><a href="">產品系列</a></li>
+                    <li class="gifts"><a href="">獻禮的美學</a></li>
+                    <li class="shops"><a href="">尋找精品店</a></li>
+                    <li class="home"><a href="story.html">我們的家</a></li>
+                </ul>
+            </nav>
+            <div class="col-4 JML-wrapper ">
+                <figure>
+                    <a href=""><img class=JML-logo src="images/JML-logo.png" alt="Jo-malone"></img></a>
+                </figure>
+            </div>
+            <aside class="col-2 header-right-aside">
+                <div class="right-aside-part ">
+                    <a href=""><i class="bi bi-search all-logo"></i></a>
+                </div>
+                <div class="right-aside-part person">
+                    <a href=""><i class="bi bi-person all-logo"></i></a>
+                </div>
+                <div class="right-aside-part bookmark">
+                    <a href=""><i class="bi bi-bookmark all-logo"></i></a>
+                </div>
+                <div class="right-aside-part ">
+                    <button type="button" class="btn cart-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        <i class="bi bi-handbag all-logo modalog modal-sm"></i>
+                    </button>
+                </div>
+            </aside>
+        </header>
+    </div>
+    <!-- 圖片輪播 -->
+    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="3000">
+                <a href="">
+                    <img src="images/momday.jpg" class="d-block w-100" alt="...">
+                </a>
+                <div class="carousel-caption d-none d-md-block search">
+                    <h2>母親節送禮推薦</h2>
+                    <p>探索更多</p>
+                </div>
+            </div>
+            <div class="carousel-item" data-bs-interval="3000">
+                <a href="">
+                    <img src="images/flower.png" class="d-block w-100" alt="...">
+                </a>
+                <div class="carousel-caption d-none d-md-block search">
+                    <h2>地中海花園系列 全新登場</h2>
+                    <p>探索更多</p>
+                </div>
+            </div>
+            <div class="carousel-item" data-bs-interval="3000">
+                <a href="">
+                    <img src="images/combine.png" class="d-block w-100" alt="...">
+                </a>
+                <div class="carousel-caption d-none d-md-block search">
+                    <h2>香氛揉合，創造裝屬於你的香氣</h2>
+                    <p>探索更多</p>
+                </div>
+            </div>
+            <div class="carousel-item" data-bs-interval="3000">
+                <a href="">
+                    <img src="images/house.png" class="d-block w-100" alt="...">
+                </a>
+                <div class="carousel-caption d-none d-md-block search">
+                    <h2>Townhouse 居家香氛工藝系列</h2>
+                    <p>探索更多</p>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+    <div class="container-fluid present">
+        <p>香氛盛禮</p>
+    </div>
+    <!-- 選購部分 -->
+    <div class="container-fluid main-saler py-5">
+        <div class="row">
+            <div class="col-6  col-md-3">
+                <div class="saler">
+                    <figure>
+                        <a href="cross-cate.html"><img class="JML-logo" src="images/Super-Hero.jpg" alt=""></a>
+                    </figure>
+                    <p>Cross category set with Super Hero</p><br>
+                    <p>明星奢華潤膚香氛組 花果香調</p>
+                    <p>NT$1,275 One Size</p>
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn saler-btn" data-bs-toggle="modal" data-bs-target="#exampleModal-1">
+                        快速選購
+                    </button>
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="saler">
+                    <figure>
+                        <a href="EPF-Layering.html"><img class="JML-logo" src="images/EPF-Layering.jpg" alt=""></a>
+                    </figure>
+                    <p>English Pear & Freesia Layering Collection</p><br>
+                    <p>英國梨與小蒼蘭香氛禮盒</p>
+                    <p>NT$4,750 One Size</p>
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn saler-btn" data-bs-toggle="modal" data-bs-target="#exampleModal-2">
+                        快速選購
+                    </button>
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="saler">
+                    <figure>
+                        <a href="EPF-Chronic.html"><img class="JML-logo" src="images/EPF-Chronicles.jpg" alt=""></a>
+                    </figure>
+                    <p>English Pear & Freesia Chronicles</p><br>
+                    <p>英國梨與小蒼蘭糅香禮盒</p>
+                    <p>NT$4,200 One Size</p>
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn saler-btn" data-bs-toggle="modal" data-bs-target="#exampleModal-3">
+                        快速選購
+                    </button>
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="saler">
+                    <figure>
+                        <a href="Sea-Daffodil.html"><img class="JML-logo" src="images/Sea-Daffodil.jpg" alt=""></a>
+                    </figure>
+                    <p id="Sea-Daffodil">Sea Daffodil Cologne</p><br>
+                    <p>地中海水仙香水</p>
+                    <div class="btn-group inline-ele">
+                        <button class="btn btn-secondary dropdown-toggle choose-btn" type="button"
+                            id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                            $3,750 50ml
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <li><a class="dropdown-item" href="#Sea-Dffodil">$3,750 50ml</a></li>
+                            <li><a class="dropdown-item" href="#Sea-Dffodil">$5,450 100ml</a></li>
+
+                        </ul>
+                    </div>
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn saler-btn" data-bs-toggle="modal" data-bs-target="#exampleModal-4">
+                        快速選購
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 彈出式視窗-->
+    <div class="modal fade" id="exampleModal-1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content" style="background-color:var(--main-color)">
+                <div class="modal-header">
+                    <h5 class="modal-title " id="exampleModalLabel">Cross category set with Super Hero</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="saler">
+                        <figure>
+                            <a href=""><img class="JML-logo justify-content-center" src="images/Super-Hero.jpg"
+                                    alt=""></a>
+                        </figure>
+                        <p>Cross category set with Super Hero</p><br>
+                        <p>明星奢華潤膚香氛組 花果香調</p>
+                        <p>NT$1,275 One Size</p>
+                    </div>
+                </div>
+                <div class="modal-footer" style="justify-content: center;">
+                    <button type="button" class="btn saler-btn">加到購物車</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="exampleModal-2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content" style="background-color:var(--main-color)">
+                <div class="modal-header">
+                    <h5 class="modal-title " id="exampleModalLabel">English Pear & Freesia Layering Collection</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="saler">
+                        <figure>
+                            <a href=""><img class="JML-logo justify-content-center" src="images/Super-Hero.jpg"
+                                    alt=""></a>
+                        </figure>
+                        <p>English Pear & Freesia Layering Collection</p><br>
+                        <p>英國梨與小蒼蘭香氛禮盒</p>
+                        <p>NT$4,750 One Size</p>
+                    </div>
+                </div>
+                <div class="modal-footer" style="justify-content: center;">
+                    <button type="button" class="btn saler-btn">加到購物車</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="exampleModal-3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content" style="background-color:var(--main-color)">
+                <div class="modal-header">
+                    <h5 class="modal-title " id="exampleModalLabel">English Pear & Freesia Chronicles</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="saler">
+                        <figure>
+                            <a href=""><img class="JML-logo justify-content-center" src="images/Super-Hero.jpg"
+                                    alt=""></a>
+                        </figure>
+                        <p>English Pear & Freesia Chronicles</p><br>
+                        <p>英國梨與小蒼蘭糅香禮盒</p>
+                        <p>NT$4,200 One Size</p>
+                    </div>
+                </div>
+                <div class="modal-footer" style="justify-content: center;">
+                    <button type="button" class="btn saler-btn">加到購物車</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="exampleModal-4" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content" style="background-color:var(--main-color)">
+                <div class="modal-header">
+                    <h5 class="modal-title " id="exampleModalLabel">Sea Daffodil Cologne</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="saler">
+                        <figure>
+                            <a href=""><img class="JML-logo justify-content-center" src="images/Sea-Daffodil.jpg"
+                                    alt=""></a>
+                        </figure>
+                        <p>Sea Daffodil Cologne</p><br>
+                        <p>地中海水仙香水</p>
+                        <div class="btn-group inline-ele">
+                            <button class="btn btn-secondary dropdown-toggle choose-btn" type="button"
+                                id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                                $3,750 50ml
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <li><a class="dropdown-item" href="#Sea-Dffodil">$3,750 50ml</a></li>
+                                <li><a class="dropdown-item" href="#Sea-Dffodil">$5,450 100ml</a></li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer" style="justify-content: center;">
+                    <button type="button" class="btn saler-btn">加到購物車</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 購物車 -->
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content text-align-center" style="background-color:var(--main-color)">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">購物車</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h3>品項</h3>
+
+                    <ul id="cart">
+                    </ul>
+                    <!-- 總價: <span id="total"></span> 元 -->
+                </div>
+                <div class="modal-footer">
+                    <a class="btn submit-btn" id="clear">清空購物車</a>
+                    <button type="button" class="btn submit-btn">購買</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- cookie系列 -->
+    <div class="container-fluid bg-dark py-1 fixed-bottom" id="cookie-hint-container">
+        <div class="row justify-content-center">
+            <div class="col-9">
+                <div class="row">
+                    <div class="col-10 text-light">
+                        首次於官網下單即享精美三件首購禮(恕無法併享下單禮)
+                    </div>
+                    <div class="col-1">
+                        <button class="btn btn-light text-primary" type="button" id="cookie-hint-button">X</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- footer -->
+    <div class="container main-footer">
+        <div class="container-fluid" style="margin-top:10px">
+            <div class="row">
+                <table class="table-borderless col-12">
+                    <thead>
+                        <tr>
+                            <th class="col" scope="col">客服中心</th>
+                            <th scope="col">分店查詢</th>
+                            <th scope="col">關於我們</th>
+                            <th scope="col">了解我們</th>
+                            <th class="follow-mail" scope="col">訂閱電子報</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td scope="row"><a href="">常見問題</a></td>
+                            <td><a href="">搜尋櫃點</a></td>
+                            <td><a href="">企業資訊</a></td>
+                            <td><a href="">Instagram</a></td>
+                            <td>
+                                <form class="needs-validation" novalidate>
+                                    <div class="mb-2">
+                                        <input type="account" class="form-control" id="accountInput" placeholder="Email"
+                                            name="Account" required>
+                                        <div id="emailHelp" class="invalid-feedback">請輸入帳號。
+                                        </div>
+                                    </div>
+                                </form>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td scope="row"><a href="">與我們聯繫</a></td>
+                            <td></td>
+                            <td><a href="">企業贈禮</a></td>
+                            <td><a href="">Facebook</a></td>
+                            <td>
+                                <form class="needs-validation" novalidate>
+                                    <button type="submit" class="btn submit-btn">提交</button>
+                                </form>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td scope="row"><a href="">我的帳戶</a></td>
+                            <td></td>
+                            <td></td>
+                            <td><a href="">Line</a></td>
+                        </tr>
+                        <tr>
+                            <td scope="row"><a href="">我的訂單</a></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td scope="row"><a href="">運送服務</a></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td scope="row"><a href="">退換貨服務</a></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td scope="row"><a href="">線上購物</a></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid last-footer">
+        <div class="official-wrapper">
+            <figure>
+                <a href=""><img class=JML-logo src="images/JML-offica-logo.jpg" alt="Jo-malone"></img></a>
+            </figure>
+
+        </div>
+    </div>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+        crossorigin="anonymous"></script>
+
+    <script>
+        // cookie功能
+        $(document).ready(function () {
+            // const $navbar = $('#navbar')
+            const $cookieHintContainer = $('#cookie-hint-container');
+            $(document)
+                .on('click', '#cookie-hint-button', function () {
+                    $cookieHintContainer.fadeOut();
+                })
+        });
+        //信箱功能
+        $(document).ready(function () {
+            const $form = $('form');
+            $form.submit(function (event) {
+                // 阻止原生 submit 行為
+                event.preventDefault();
+                if ($form.hasClass('needs-validation')) {
+                    $form.removeClass('needs-validation');
+                    $form.addClass('was-validated');
+                }
+                if ($('.form-control:invalid').length === 0) {
+                    // doLogin()
+                    alert('訂閱成功');
+                }
+            });
+        });   
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Story</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/normalize.css"> <!-- 讓版面切齊網站 -->
+    <script src="my-js.js"></script>
+    <!-- CSS only -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <style>
+        .videodiv {
+            position: relative;
+            padding-bottom: 56.25%;
+            padding-top: 30px;
+            height: 0;
+            overflow: hidden;
+        }
+
+        .videodiv iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .submit-btn {
+            background-color: black;
+            color: white;
+            padding: 5px 30px;
+            border-radius: 0px;
+        }
+        .submit-btn:hover {
+            background-color: #FCF9EE;
+            color: black;
+            padding: 5px 30px;
+            border-radius: 0px;
+            border: 1px solid gray;
+        }
+
+        .combine-wrapper {
+            max-width: 1440px;
+        }
+
+        .combine {
+            width: 100%;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- header部分 -->
+    <!-- header部分 -->
+    <div class="container-fluid fixed-top" in="navbar">
+        <header class="row main-header">
+            <nav class="col-5 main-nav fixd-bottom main-nav">
+                <ul class="list-unstyled">
+                    <li class="products"><a href="">產品系列</a></li>
+                    <li class="gifts"><a href="">獻禮的美學</a></li>
+                    <li class="shops"><a href="">尋找精品店</a></li>
+                    <li class="home"><a href="story.html">我們的家</a></li>
+                </ul>
+            </nav>
+            <div class="col-4 JML-wrapper ">
+                <figure>
+                    <a href="Jo malone.html"><img class=JML-logo src="images/JML-logo.png" alt="Jo-malone"></img></a>
+                </figure>
+            </div>
+            <aside class="col-2 header-right-aside">
+                <div class="right-aside-part ">
+                    <a href=""><i class="bi bi-search all-logo"></i></a>
+                </div>
+                <div class="right-aside-part person">
+                    <a href=""><i class="bi bi-person all-logo"></i></a>
+                </div>
+                <div class="right-aside-part bookmark">
+                    <a href=""><i class="bi bi-bookmark all-logo"></i></a>
+                </div>
+                <div class="right-aside-part ">
+                    <a href=""><i class="bi bi-handbag all-logo"></i></a>
+                </div>
+            </aside>
+        </header>
+    </div>
+
+    <!-- Youtube -->
+    <div class="videodiv">
+        <!-- 這裡是貼上YouTube的嵌入iframe碼-->
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/_H64yU_6nYk" title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+    </div>
+
+    <!-- 手風琴 -->
+    <div class="container-fliud ">
+        <div class="row">
+            <div class="accordion" id="accordionExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            Jo Malone London
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body text-black ">
+                            <strong>Jo Malone London</strong> 是倫敦營銷高檔護膚和香水的品牌,1999年被Estee
+                            Lauder集團收購。它的特色是個性化、高品質和與眾不同的香水。Jo Malone London
+                            在西方有著香水女王的美譽，這個牌子價格雖然不便宜，但因為其香水以簡單而純粹為諸多明星、上流階層所喜愛。 質樸的包裝,透露著濃厚的英倫風情。幾乎所有的Jo Malone London
+                            的香水都是以原料的名稱來命名的,只有一款叫<code>154</code>的香水,取名就是為了紀念第一家店。
+                            據說第一家店的面積不大,所以每到聖誕,來店裡血拼的人都會在Walton街上排出長長的隊。到了1999年,這家店搬到了倫敦的斯隆街 (Sloane Street)
+                            ,當時是她家的旗艦店。也同樣是1999年,祖·瑪瓏Jo Malone London被雅詩蘭黛集團收購。Jo Malone London
+                            的產品發展到現時已有多種香水、蠟燭、身體乳、沐浴與洗髮品等。
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            創始人
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body text-black ">
+                            作為以自名創立品牌的英國人 <code>Jo Malone</code>是一位很有天分的香水調製師,和許多化妝品品牌創始人一樣,Jo
+                            Malone的母親也在美容院工作。<code>Jo Malone</code>從小就學著自己調配香水,長大後,她白天在花店工作,晚上在自家廚房為人做臉。在機緣巧合下,她調製了一種NUTMEG
+                            & GINGER
+                            肉荳蔻和薑花香型的浴油送給客戶，沒想到卻大受歡迎,有人為了開party一下子就買了100瓶,結果參加party的客人中有86個向<code>Jo Malone</code>購買同樣的浴油。
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingThree">
+                        <button class="accordion-button collapsed " type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            香氛糅合
+                        </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body text-black ">
+                            <div class="text-center">
+                                <figure class=" combine-wrapper text-center">
+                                    <img class="combine" src="images/per-combin.jpg" alt="香氛糅合">
+                                </figure>
+                                <p>
+                                    <strong>香氛糅合</strong>
+                                    對香氛迷來說,撞香就像撞衫、撞鞋一樣惱人尷尬(會想立刻離開現場那種),而JO MALONE
+                                    LONDON可說是帶領香氛迷從此脫離撞香危機的救世主!舉世聞名的「香氛揉合藝術」,讓人可以隨心、隨喜好混搭不同香味,擁有自己喜愛的香氛。
+                                </p>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- cookie系列 -->
+    <div class="container-fluid bg-dark py-1 fixed-bottom" id="cookie-hint-container">
+        <div class="row justify-content-center">
+            <div class="col-9">
+                <div class="row">
+                    <div class="col-10 text-light">
+                        首次於官網下單即享精美三件首購禮(恕無法併享下單禮)
+                    </div>
+                    <div class="col-1">
+                        <button class="btn btn-light text-primary" type="button" id="cookie-hint-button">X</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- footer -->
+    <div class="container">
+        <div class="container-fluid" style="margin-top:10px">
+            <div class="row">
+                <table class="table-borderless col-12">
+                    <thead>
+                        <tr>
+                            <th class="col" scope="col">客服中心</th>
+                            <th scope="col">分店查詢</th>
+                            <th scope="col">關於我們</th>
+                            <th scope="col">了解我們</th>
+                            <th class="follow-mail" scope="col">訂閱電子報</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td scope="row"><a href="">常見問題</a></td>
+                            <td><a href="">搜尋櫃點</a></td>
+                            <td><a href="">企業資訊</a></td>
+                            <td><a href="">Instagram</a></td>
+                            <td>
+                                <form class="needs-validation" novalidate>
+                                    <div class="mb-2">
+                                        <input type="account" class="form-control" id="accountInput" placeholder="Email"
+                                            name="Account" required>
+                                        <div id="emailHelp" class="invalid-feedback">請輸入帳號。
+                                        </div>
+                                    </div>
+                                </form>
+                            </td>
+
+                        </tr>
+                        <tr>
+                            <td scope="row"><a href="">與我們聯繫</a></td>
+                            <td></td>
+                            <td><a href="">企業贈禮</a></td>
+                            <td><a href="">Facebook</a></td>
+                            <td>
+                                <form class="needs-validation" novalidate>
+                                    <button type="submit" class="btn submit-btn">提交</button>
+                                </form>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td scope="row"><a href="">我的帳戶</a></td>
+                            <td></td>
+                            <td></td>
+                            <td><a href="">Line</a></td>
+                        </tr>
+                        <tr>
+                            <td scope="row"><a href="">我的訂單</a></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td scope="row"><a href="">運送服務</a></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td scope="row"><a href="">退換貨服務</a></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td scope="row"><a href="">線上購物</a></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid last-footer">
+        <div class="official-wrapper">
+            <figure>
+
+                <a href=""><img class=JML-logo src="images/JML-offica-logo.jpg" alt="Jo-malone"></img></a>
+
+            </figure>
+
+        </div>
+    </div>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+        crossorigin="anonymous"></script>
+    <script>
+        // cookie功能
+        $(document).ready(function () {
+            // const $navbar = $('#navbar')
+            const $cookieHintContainer = $('#cookie-hint-container');
+            $(document)
+                .on('click', '#cookie-hint-button', function () {
+                    $cookieHintContainer.fadeOut();
+                })
+        });
+        //信箱功能
+        $(document).ready(function () {
+            const $form = $('form');
+            $form.submit(function (event) {
+                // 阻止原生 submit 行為
+                event.preventDefault();
+                if ($form.hasClass('needs-validation')) {
+                    $form.removeClass('needs-validation');
+                    $form.addClass('was-validated');
+                }
+                if ($('.form-control:invalid').length === 0) {
+                    // doLogin()
+                    alert('訂閱成功');
+                }
+            });
+        });   
+    </script>
+</body>
+
+</html>
